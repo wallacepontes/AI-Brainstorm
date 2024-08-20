@@ -359,8 +359,6 @@ https://www.youtube.com/watch?v=kum_7D9EORs&pp=ygUgVGhlIFNlY29uZCBNYWNoaW5lIEFnZ
 * [The Beginning Infinity: Explanations That… by David Deutsch · Audiobook preview](https://www.youtube.com/watch?v=rsuVd6Y1ab8)
 	> [<img src="https://img.youtube.com/vi/rsuVd6Y1ab8/0.jpg" width="200">](https://www.youtube.com/watch?v=rsuVd6Y1ab8 "The Beginning Infinity: Explanations That… by David Deutsch · Audiobook preview by Google Play Books 633 views 2 hour, 00 minutes, 55 seconds")
 
-https://www.youtube.com/watch?v=rsuVd6Y1ab8&pp=ygUjVGhlIEJlZ2lubmluZyBvZiBJbmZpbml0eSBhdWRpb2Jvb2s%3D
-
 ## The ChatGPT Millionaire
 
 **The ChatGPT Millionaire: Making Money Online with AI** by Neil Dagger  
