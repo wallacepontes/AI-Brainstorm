@@ -36,8 +36,7 @@
 	> [<img src="https://img.youtube.com/vi/0B5eIE_1vpU/0.jpg" width="200">](https://www.youtube.com/watch?v=0B5eIE_1vpU "Scikit-learn is a free software machine learning library for the Python programming language. Learn how to use it in this crash course. by freeCodeCamp.org 326K views 2 hours, 09 minutes, 22 seconds")
  * [Scikit-Learn Course - Machine Learning in Python Tutorial](https://www.youtube.com/watch?v=pqNCD_5r0IU)
 	> [<img src="https://img.youtube.com/vi/pqNCD_5r0IU/0.jpg" width="200">](https://www.youtube.com/watch?v=pqNCD_5r0IU "Scikit-learn is a free software machine learning library for the Python programming language. Learn about machine learning using scikit-learn in this full course. by freeCodeCamp.org 326K views 2 hours, 54 minutes, 24 seconds")
- * [Statistics - A Full University Course on Data Science Basics](https://www.youtube.com/watch?v=xxpc-HPKN28)
-	> [<img src="https://img.youtube.com/vi/xxpc-HPKN28/0.jpg" width="200">](https://www.youtube.com/watch?v=xxpc-HPKN28 "Learn the essentials of statistics in this complete course. This course introduces the various methods used to collect, organize, summarize, interpret and reach conclusions about data. An emphasis is placed on demonstrating that statistics is more than mathematical calculations. By using examples gathered from real life, students learn to use statistical methods as analytical tools to develop generalizations and meaningful conclusions in their field of study.  by freeCodeCamp.org 2,833M views 8 hours, 15 minutes, 04 seconds")
+
  * [Machine Learning Foundations Course – Regression Analysis](https://www.youtube.com/watch?v=2IZKK3pJQjg)
 	> [<img src="https://img.youtube.com/vi/2IZKK3pJQjg/0.jpg" width="200">](https://www.youtube.com/watch?v=2IZKK3pJQjg "Welcome to this core Machine Learning course for beginners! This course is designed to help you build a solid foundation in machine learning, focusing on core concepts and in-depth explanations of regression analysis, which is often overlooked in other courses. Whether you're a beginner or someone looking to strengthen your understanding of machine learning, this course is for you!  by freeCodeCamp.org 137K views 9 hours, 33 minutes, 28 seconds")
  * [Practical Deep Learning for Coders - Full Course from fast.ai and Jeremy Howard](https://www.youtube.com/watch?v=0oyCUWLL_fU)
@@ -60,8 +59,7 @@
 	> [<img src="https://img.youtube.com/vi/I549C6SmUnk/0.jpg" width="200">](https://www.youtube.com/watch?v=I549C6SmUnk "Learn how to create games using LÖVE 2D and Lua. LÖVE is a framework you can use to make 2D games in Lua. It's free, open-source, and works on Windows, Mac OS X, Linux, Android and iOS. In this course, you will first learn how to program in Lua. Then you will learn how to use Love2D with Lua to develop amazing games. by freeCodeCamp.org 199K views 11 hours, 11 minutes, 51 seconds")
  * [Inteligência artificial: curso comemorativo dos 90 anos da USP](https://www.youtube.com/watch?v=YDtgIHeHZTk)
 	> [<img src="https://img.youtube.com/vi/YDtgIHeHZTk/0.jpg" width="200">](https://www.youtube.com/watch?v=YDtgIHeHZTk "Todos e Todas - Inteligência Artificial (IA) é um tópico de grande destaque atualmente, com grandes implicações para a sociedade. Com esse curso, visa-se compartilhar um pouco do conhecimento de IA de grupos de pesquisa da Universidade de São Paulo (USP) com o público interessado, auxiliando-o no entendimento do que é IA, suas potencialidades e limitações, possibilitando um maior engajamento desse público no tema by Pró-Reitoria de Pesquisa e Inovação da USP 88K views 7 hours, 29 minutes, 58 seconds")
-* [Build ENTIRE Apps With A Single Prompt - FREE Open-Source Devika Tutorial](https://www.youtube.com/watch?v=kw9nTK42bTw)
-	> [<img src="https://img.youtube.com/vi/kw9nTK42bTw/0.jpg" width="200">](https://www.youtube.com/watch?v=kw9nTK42bTw "Devika is the most popular open-source Devin clone, allowing you to use AI to build entire apps easily. by Matthew Berman 76K views 12 minutes, 26 seconds")
+
 * [Understanding AI from Scratch – Neural Networks Course](https://www.youtube.com/watch?v=VgzHT9quo5c)
 	> [<img src="https://img.youtube.com/vi/VgzHT9quo5c/0.jpg" width="200">](https://www.youtube.com/watch?v=VgzHT9quo5c "Understanding AI from Scratch – Neuaral Networks Without Libraries Course by freeCodeCamp.org 178K views 3 hours, 44 minutes, 17 seconds")
 * [Azure AI Fundamentals Certification 2024 (AI-900) - Full Course to PASS the Exam](https://www.youtube.com/watch?v=hHjmr_YOqnU)
@@ -82,3 +80,5 @@
 3. [Soumith Chintala](https://www.youtube.com/results?search_query=Soumith+Chintala)
 4. [Bojan Tunguz](https://www.youtube.com/results?search_query=Bojan+Tunguz)
 5. [Sebastian Raschka](https://www.youtube.com/results?search_query=Sebastian+Raschka)
+6. https://thecleverprogrammer.com/
+7. 
