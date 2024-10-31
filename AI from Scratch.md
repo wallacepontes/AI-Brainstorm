@@ -81,4 +81,8 @@
 4. [Bojan Tunguz](https://www.youtube.com/results?search_query=Bojan+Tunguz)
 5. [Sebastian Raschka](https://www.youtube.com/results?search_query=Sebastian+Raschka)
 6. https://thecleverprogrammer.com/
-7. 
+7. https://github.com/pytorch/pytorch
+8. https://colab.research.google.com/#scrollTo=OwuxHmxllTwN
+9. https://jupyter.org/
+10. https://www.learnpytorch.io/
+11. https://www.youtube.com/watch?v=Z_ikDlimN6A

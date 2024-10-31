@@ -36,6 +36,14 @@ Overall, reinforcement learning is a powerful paradigm for solving problems wher
 
 ## Deep Reinforcement Learning (DRL)
 
+AI Teaches Itself to Walk!
+
+In this video an AI Warehouse agent named Albert learns how to walk to escape 5 rooms I created. The AI was trained using Deep Reinforcement Learning, a method of Machine Learning which involves rewarding the agent for doing something correctly, and punishing it for doing anything incorrectly. Albert's actions are controlled by a Neural Network that's updated after each attempt in order to try to give Albert more rewards and less punishments over time. Check the pinned comment for more information on how the AI was trained!
+
+According to the video, AI can now teach itself to walk through Deep Reinforcement Learning. This is a type of machine learning algorithm that allows agents to learn how to make decisions by interacting with their environment. In this case, the environment is a virtual world where the AI agent is trying to learn how to walk.
+
+This video demonstrates the potential of deep reinforcement learning to create intelligent agents that can learn complex tasks. This technology has the potential to be used in a variety of applications, such as robotics, autonomous vehicles, and video games.
+
 ### Video Credits - @aiwarehouse [[1]](https://www.youtube.com/watch?v=L_4BPjLBF4E)
 
 That's a fascinating video and a great example of the capabilities of deep reinforcement learning! 
