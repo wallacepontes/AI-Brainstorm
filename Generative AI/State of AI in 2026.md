@@ -1,0 +1,258 @@
+# State of AI in 2026
+
+## Table of Contents
+
+- [State of AI in 2026](#state-of-ai-in-2026)
+  - [Table of Contents](#table-of-contents)
+  - [LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI](#llms-coding-scaling-laws-china-agents-gpus-agi)
+    - [**0:00 - Introduction**](#000---introduction)
+    - [**1:57 - China vs US: Who wins the AI race?**](#157---china-vs-us-who-wins-the-ai-race)
+    - [**10:38 - ChatGPT vs Claude vs Gemini vs Grok: Who is winning?**](#1038---chatgpt-vs-claude-vs-gemini-vs-grok-who-is-winning)
+    - [**21:38 - Best AI for coding**](#2138---best-ai-for-coding)
+    - [**28:29 - Open Source vs Closed Source LLMs**](#2829---open-source-vs-closed-source-llms)
+    - [**40:08 - Transformers: Evolution of LLMs since 2019**](#4008---transformers-evolution-of-llms-since-2019)
+    - [**48:05 - AI Scaling Laws: Are they dead or still holding?**](#4805---ai-scaling-laws-are-they-dead-or-still-holding)
+    - [**1:04:12 - How AI is trained: Pre-training, Mid-training, and Post-training**](#10412---how-ai-is-trained-pre-training-mid-training-and-post-training)
+    - [**1:37:18 - Post-training explained: Exciting new research directions in LLMs**](#13718---post-training-explained-exciting-new-research-directions-in-llms)
+    - [**1:58:11 - Advice for beginners on how to get into AI development \& research**](#15811---advice-for-beginners-on-how-to-get-into-ai-development--research)
+    - [**2:21:03 - Work culture in AI (72+ hour weeks)**](#22103---work-culture-in-ai-72-hour-weeks)
+    - [**2:24:49 - Silicon Valley bubble**](#22449---silicon-valley-bubble)
+    - [**2:28:46 - Text diffusion models and other new research directions**](#22846---text-diffusion-models-and-other-new-research-directions)
+    - [**2:34:28 - Tool use**](#23428---tool-use)
+    - [**2:38:44 - Continual learning**](#23844---continual-learning)
+    - [**2:44:06 - Long context**](#24406---long-context)
+    - [**2:50:21 - Robotics**](#25021---robotics)
+    - [**2:59:31 - Timeline to AGI**](#25931---timeline-to-agi)
+    - [**3:06:47 - Will AI replace programmers?**](#30647---will-ai-replace-programmers)
+    - [**3:25:18 - Is the dream of AGI dying?**](#32518---is-the-dream-of-agi-dying)
+    - [**3:32:07 - How AI will make money?**](#33207---how-ai-will-make-money)
+    - [**3:36:29 - Big acquisitions in 2026**](#33629---big-acquisitions-in-2026)
+    - [**3:41:01 - Future of OpenAI, Anthropic, Google DeepMind, xAI, Meta**](#34101---future-of-openai-anthropic-google-deepmind-xai-meta)
+    - [**3:53:35 - Manhattan Project for AI**](#35335---manhattan-project-for-ai)
+    - [**4:00 - Future of NVIDIA, GPUs, and AI compute clusters**](#400---future-of-nvidia-gpus-and-ai-compute-clusters)
+    - [**4:08:15 - Future of human civilization**](#40815---future-of-human-civilization)
+  - [Video](#video)
+  - [References](#references)
+
+## LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI 
+
+- Lex Fridman Podcast #490
+
+### **0:00 - Introduction**
+
+This course explores the state-of-the-art in artificial intelligence, focusing on the technical breakthroughs of the past year and predictions for 2026. Our primary experts include **Sebastian Raschka**, author of *Build a Large Language Model from Scratch*, and **Nathan Lambert**, the post-training lead at the Allen Institute for AI. We will examine the shift from simple chatbots to complex reasoning models and autonomous agents.
+
+---
+
+### **1:57 - China vs US: Who wins the AI race?**
+
+The "DeepSeek moment" in January 2025 signaled a major shift, with Chinese companies releasing **near-state-of-the-art models** for much less compute. While the US leads in total budget and hardware resources, the ideas in AI are fluid and rapidly shared internationally. China currently leads in the number of labs releasing high-performance **open-weight models**, such as those from DeepSeek, Kimi Moonshot, and Z.ai. (GLM Models, Minimax's models)
+
+- So some of these models like DeepSeek have the love of the people because
+they are open-weight.
+
+  > Ai Chatbots	Percentage Market Share
+  > **AI Chatbot Market Share Worldwide - January 2026**
+  > - ChatGPT	80.49%
+  > - Perplexity	7.89%
+  > - Google Gemini	7.18%
+  > - Microsoft Copilot	3.5%
+  > - Claude	0.92%
+  > - Deepseek	0.01%
+
+
+---
+
+### **10:38 - ChatGPT vs Claude vs Gemini vs Grok: Who is winning?**
+
+**Gemini 3** from Google initially set a high bar for marketing and structural advantages, but **Claude Opus 4.5** from Anthropic became the "darling" of researchers by late 2025. **ChatGPT** remains the incumbent with the largest user base, benefiting from brand recognition and "flywheel" effects. **Grok 4**, specifically the "Heavy" variant, has emerged as a powerful tool for specialized tasks like debugging.
+
+- Put it into ChatGPT and say, "Hey, do a very thorough check. Are all my references correct? Are all my thoughts correct? Did I make any formatting mistakes and are the figure numbers wrong?"
+
+> The "Needle in a Haystack" (NIAH) test evaluates the ability of a Large Language Model (LLM) to accurately retrieve a specific piece of information (the "needle") from a vast, unrelated, or distracting dataset (the "haystack"). It is a critical,,, stress test for assessing an LLM's long-context retention—its ability to effectively use its entire context window without "forgetting" or losing information located in the middle, a common issue known as "lost-in-the-middle".
+>
+> With OpenRouter, it's easy to look at multi-model things.
+You can run DeepSeek on Perplexity.
+
+---
+
+### **21:38 - Best AI for coding**
+
+**Claude Code** is widely considered the superior experience for software engineering, allowing developers to program with natural language at a macro level. For **hardcore debugging**, some researchers prefer **Grok 4 Heavy**. 
+
+**Cursor**, an AI-powered IDE, remains highly popular by integrating models like Claude directly into the developer workflow.
+
+**Windsurf Plugin (formerly Codeium)**: AI Coding Autocomplete and Chat for Python, JavaScript, TypeScript, and more
+
+**Codex** is OpenAI’s coding agent that helps you write, review, and ship code faster. Use it side-by-side in your IDE or delegate larger tasks to the cloud.
+
+> You can have Claude Code open, you can have Cursor open, you can have VS Code open, and you can select the same models on all of them— ...and ask questions, and it's very interesting. Claude Code is way better in that domain. It's remarkable.
+
+---
+
+### **28:29 - Open Source vs Closed Source LLMs**
+
+Chinese companies favor **open-weight models** to gain international influence and avoid security concerns associated with paid US API subscriptions. In the West, **OLMo (AI2)** and **Nemotron (NVIDIA)** are pushing for transparency by releasing both data and code. However, the most powerful models from OpenAI and Anthropic remain **closed-source**, as labs prioritize performance and safety.
+
+> - DeepSeek, Kimi, MiniMax, Z.ai, Moonshot.
+>  - Mistral AI, Gemma
+>  - Nemotron 3
+>  - Qwen
+>  - llama
+
+**Qwen 3 is obviously a standout.**
+
+![alt text](image.png)
+
+> - A lot of American startups make money by hosting-
+...these models from China and selling them. It's called selling tokens, which means somebody will call the model to do some piece of work.
+
+> The big ideas that are still prevalent are Mixture of Experts, multi-head latent attention, sliding window attention, and group query attention.
+---
+
+### **40:08 - Transformers: Evolution of LLMs since 2019**
+
+The fundamental **transformer architecture** remains largely unchanged since the "Attention Is All You Need" paper. Modern models are essentially "lineage" descendants of **GPT-2**, featuring minor tweaks like **Mixture of Experts (MoE)**, **Group Query Attention (GQA)**, and **RMSNorm**. The primary innovation has been scaling these architectures with massive compute and better data.
+
+---
+
+### **48:05 - AI Scaling Laws: Are they dead or still holding?**
+Scaling laws are still holding strong across pre-training, reinforcement learning (RL), and **inference-time compute**. The release of models like **o1** demonstrated that letting a model "think" longer at inference time creates a step function in reasoning ability. We are entering an era of **gigawatt-scale compute clusters** that will continue to push these laws further in 2026.
+
+---
+
+### **1:04:12 - How AI is trained: Pre-training, Mid-training, and Post-training**
+*   **Pre-training:** Massive next-token prediction on trillions of tokens from the internet, books, and scientific papers.
+*   **Mid-training:** A specialized phase focusing on high-quality data mixtures, such as math, code, or long-context documents.
+*   **Post-training:** The refinement stage using fine-tuning and reinforcement learning to unlock specific skills and handle tool use.
+
+---
+
+### **1:37:18 - Post-training explained: Exciting new research directions in LLMs**
+**Reinforcement Learning with Verifiable Rewards (RLVR)** is the major breakthrough of 2025. By using verifiable domains like **math and code**, models can learn through trial and error to correct their own mistakes. Research is now moving toward **Process Reward Models**, which grade individual steps in a reasoning chain rather than just the final answer.
+
+---
+
+### **1:58:11 - Advice for beginners on how to get into AI development & research**
+The best way to learn is to **build a large language model from scratch** to understand components like the attention mechanism and KV cache. Beginners should reverse-engineer existing open-weight models by matching their outputs against reference implementations in libraries like **Hugging Face**. For research, finding **narrow evaluation niches**—such as where a specific model fails—can launch a career.
+
+---
+
+### **2:21:03 - Work culture in AI (72+ hour weeks)**
+Work culture in frontier AI labs has adopted the **"9-9-6" schedule**—9:00 AM to 9:00 PM, six days a week. This intense pressure is driven by the "leapfrogging" nature of the competition, where being even a few months behind is seen as a major loss.
+
+---
+
+### **2:24:49 - Silicon Valley bubble**
+Silicon Valley acts as a **reality distortion field** where researchers convince each other that breakthroughs are imminent. While this "echo chamber" fosters extreme productivity, it can disconnect developers from the perspectives of people in the Midwest or other parts of the world.
+
+---
+
+### **2:28:46 - Text diffusion models and other new research directions**
+**Text diffusion models** offer an alternative to autoregressive transformers by generating entire blocks of text in parallel rather than one token at a time. While not yet superior to transformers in reasoning, they are highly efficient for tasks like generating **large code diffs**.
+
+---
+
+### **2:34:28 - Tool use**
+Tool use involves an LLM calling external programs like **calculators, Python interpreters, or web search** to solve problems reliably. This paradigm shift reduces **hallucinations** by allowing the model to look up facts or perform precise math instead of relying on memory.
+
+---
+
+### **2:38:44 - Continual learning**
+**Continual learning** refers to a model's ability to modify its own weights quickly from feedback, similar to how a human employee learns on the job. Currently, this is difficult to achieve for individual users due to high compute costs, so most personalization is handled via **in-context learning** in large context windows.
+
+---
+
+### **2:44:06 - Long context**
+Context lengths are expected to scale to **2 million or 5 million tokens** in 2026. Innovative methods include **context compaction**, where an RL agent learns to summarize its own history to save memory while maintaining reasoning accuracy.
+
+---
+
+### **2:50:21 - Robotics**
+The robotics field is being supercharged by **transformer-based foundation models**. While locomotion (walking) is largely solved, **manipulation** remains difficult due to the "sim-to-real" gap and the immense complexity of the human hand. **Safety** is the ultimate barrier for consumer in-home robots.
+
+---
+
+### **2:59:31 - Timeline to AGI**
+A common definition for **AGI (Artificial General Intelligence)** is an AI capable of replacing a **remote digital worker**. Predictions for this milestone range from **2027 to 2031**, though "jagged" capabilities mean some tasks will be automated much sooner than others.
+
+---
+
+### **3:06:47 - Will AI replace programmers?**
+Programming is shifting from writing lines of code to **system design and product management**. By the end of 2026, agents will likely be able to implement simple features end-to-end in large production codebases with minimal human oversight.
+
+---
+
+### **3:25:18 - Is the dream of AGI dying?**
+The dream of a single "one model to rule them all" in the cloud is being challenged by the reality of **specialized agents**. In 2026, users will likely interact with multiple agents tailored for specific tasks like coding, research, or travel planning.
+
+---
+
+### **3:32:07 - How AI will make money?**
+Monetization strategies include high-end **subscriptions ($2,000/month)**, specialized enterprise models for fields like finance or law, and the eventual integration of **ads**. Google is uniquely positioned to turn AI demand into ad revenue due to its existing infrastructure.
+
+---
+
+### **3:36:29 - Big acquisitions in 2026**
+Expect significant consolidation, with companies like **Apple or NVIDIA** potentially acquiring specialized startups like **Perplexity or Cursor**. Many deals may be structured as **licensing agreements** to avoid antitrust scrutiny.
+
+---
+
+### **3:41:01 - Future of OpenAI, Anthropic, Google DeepMind, xAI, Meta**
+Labs are increasingly behaving like cloud providers (AWS/Azure), competing on the value of their APIs. **Meta** is currently reevaluating its commitment to open-source as Llama faces intense pressure from Chinese competitors. **xAI** is rapidly scaling to 2-gigawatt compute clusters by the end of 2026.
+
+---
+
+### **3:53:35 - Manhattan Project for AI**
+As AI becomes a matter of national security, there are discussions about a **"Manhattan Project" style centralization** to ensure the US maintains a lead over China. This could involve the federal government setting an agenda for open-weight model investment to drive domestic innovation.
+
+---
+
+### **4:00 - Future of NVIDIA, GPUs, and AI compute clusters**
+NVIDIA’s moat is the **CUDA ecosystem**, which has been built over two decades. Future hardware will likely feature a **separation between training and inference chips**, with new GPUs optimized specifically for the "pre-fill" stage of model inference.
+
+---
+
+### **4:08:15 - Future of human civilization**
+In the long term, we may transition to **brain-computer interfaces**, fundamentally changing how we interact with information. As digital "slop" increases, there will be a significant **premium on physical goods**, human connection, and in-person experiences. Ultimately, AI serves as a mirror, helping us better understand our own **consciousness**.
+
+## Video
+
+ * [State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI | Lex Fridman Podcast #490](https://www.youtube.com/watch?v=EV7WhVT270Q)
+	> [<img src="https://img.youtube.com/vi/EV7WhVT270Q/0.jpg" width="200">](https://www.youtube.com/watch?v=EV7WhVT270Q "Nathan Lambert and Sebastian Raschka are machine learning researchers, engineers, and educators. Nathan is the post-training lead at the Allen Institute for AI (Ai2) and the author of The RLHF Book. Sebastian Raschka is the author of Build a Large Language Model (From Scratch) and Build a Reasoning Model (From Scratch). by Lex Fridman 519k views 4 hour, 25 minutes")
+
+## References
+
+1. https://lexfridman.com/ai-sota-2026-transcript
+2. https://www.atomproject.ai/
+3. https://magazine.sebastianraschka.com/p/the-big-llm-architecture-comparison
+4. https://huggingface.co/deepseek-ai/DeepSeek-V3.2
+5. https://gs.statcounter.com/ai-chatbot-market-share
+6. https://medium.com/illuminations-mirror/rip-bard-and-say-hello-to-gemini-8f6a1e375be7
+7. https://www.anthropic.com/
+8. https://arena.ai/pt/leaderboard
+9. https://arize.com/blog-course/the-needle-in-a-haystack-test-evaluating-the-performance-of-llm-rag-systems/
+10. https://openrouter.ai/
+11. https://windsurf.com/
+12. https://allenai.org/
+13. https://www.llm360.ai/
+14. https://www.swiss-ai.org/apertus
+15. https://github.com/huggingface/smollm
+16. https://research.nvidia.com/labs/nemotron/Nemotron-3/
+17. https://mistral.ai/news/mistral-3
+18. https://rcai.de/en/
+19. https://www.llama.com/
+20. Nathan's X: https://x.com/natolambert
+21. Nathan's Blog: https://interconnects.ai
+22. Nathan's Website: https://natolambert.com
+23. Nathan's YouTube:    / @natolambert  
+24. Nathan's GitHub: https://github.com/natolambert
+25. Nathan's Book: https://rlhfbook.com
+26. Sebastian's X: https://x.com/rasbt
+27. Sebastian's Blog: https://magazine.sebastianraschka.com
+28. Sebastian's Website: https://sebastianraschka.com
+29. Sebastian's YouTube:    / @sebastianraschka  
+30. Sebastian's GitHub: https://github.com/rasbt
+31. Sebastian's Books
+    1.  https://www.manning.com/books/build-a-large-language-model-from-scratch
+    2.  https://www.manning.com/books/build-a-reasoning-model-from-scratch
