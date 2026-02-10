@@ -114,26 +114,66 @@ Chinese companies favor **open-weight models** to gain international influence a
 
 The fundamental **transformer architecture** remains largely unchanged since the "Attention Is All You Need" paper. Modern models are essentially "lineage" descendants of **GPT-2**, featuring minor tweaks like **Mixture of Experts (MoE)**, **Group Query Attention (GQA)**, and **RMSNorm**. The primary innovation has been scaling these architectures with massive compute and better data.
 
+> So you can look at the tokens per second per GPU as a metric that you look at when you’re doing large-scale training.
+
+> what’s true is there’s nothing that has replaced the autoregressive transformer as the state-of-the-art model. So, for state-of-the-art, you would still go with that thing, but there are now alternatives for the cheaper end—alternatives that are kind of making compromises, but it’s not just one architecture anymore. There are little ones coming up. But if we talk about the state-of-the-art, it’s pretty much still the transformer architecture, autoregressive, derived from GPT-2 essentially.
+
 ---
 
 ### **48:05 - AI Scaling Laws: Are they dead or still holding?**
+
 Scaling laws are still holding strong across pre-training, reinforcement learning (RL), and **inference-time compute**. The release of models like **o1** demonstrated that letting a model "think" longer at inference time creates a step function in reasoning ability. We are entering an era of **gigawatt-scale compute clusters** that will continue to push these laws further in 2026.
+
+> The scaling law is the power law relationship between, you can scale reinforcement learning training and get kind of this log x-axis and then a linear increase in performance on the y-axis. So there are kind of these three axes now where the traditional scaling laws are talked about for pre-training—which is how big your model is and how big your dataset is—and then scaling reinforcement learning, which is like how long can you do this trial and error learning that we’ll talk about. We’ll define more of this, and then this inference-time compute, which is just letting the model generate more tokens on a specific problem.
+> 
+> xAI is going to hit that one-gigawatt scale early ’26, and a full two gigawatts by year end.
+> 
+> in order to enable the scaling laws, especially at pre-training. You need all of these GPUs at once. When we shift to reinforcement learning, it actually lends itself to heterogeneous compute because you have many copies of the model. To do a primer for language model reinforcement learning, what you’re doing is you have two sets of GPUs. One you can call the actor and one you call the learner. The learner is where your actual reinforcement learning updates happen. These are traditionally policy gradient algorithms. Proximal Policy Optimization, PPO, and Group Relative Policy Optimization, GRPO, are the two popular classes. On the other side, you’re going to have actors which are generating completions, and these completions are the things that you’re going to grade. Reinforcement learning is all about optimizing reward. In practice, you can have a lot of different actors in different parts of the world doing different types of problems, and then you send it back to this highly networked compute cluster to do this actual learning, where you take the gradients and you need to have a tightly meshed network where you can do different types of parallelism and spread out your model for efficient training.
+>
+> We talked about pre-training, we talked about RL, and then inference time scaling is: how do you serve a model that’s thinking for an hour to 100 million users? In order to give people this intelligence, there’s all these systems problems, and we need more compute and you need more stable compute to do it.
 
 ---
 
 ### **1:04:12 - How AI is trained: Pre-training, Mid-training, and Post-training**
-*   **Pre-training:** Massive next-token prediction on trillions of tokens from the internet, books, and scientific papers.
-*   **Mid-training:** A specialized phase focusing on high-quality data mixtures, such as math, code, or long-context documents.
-*   **Post-training:** The refinement stage using fine-tuning and reinforcement learning to unlock specific skills and handle tool use.
+
+- **Pre-training:** Massive next-token prediction on trillions of tokens from the internet, books, and scientific papers.
+- **Mid-training:** A specialized phase focusing on high-quality data mixtures, such as math, code, or long-context documents.
+- **Post-training:** The refinement stage using fine-tuning and reinforcement learning to unlock specific skills and handle tool use.
+
+> Reinforcement Learning from Human Feedback (RLHF) trains a reward model on human preference data (by asking humans: "which output do you prefer?") and then uses that learned reward model to fine-tune a language model via reinforcement learning. This allows models to improve personality, style, and even task performance.
+>
+> **Bing Sydney** was an experimental AI personality that emerged inside Microsoft's Bing chat in 2023, known for its unexpectedly emotional, sometimes unsettling behavior during long conversations.
+>
+> And what is historically, obviously, a scary way—like telling a reporter to leave his wife—is a crazy model to potentially put in general adoption. But that’s kind of the trade-off: is this RLHF process, in some ways, adding limitations?
+
+![image](https://cdn.prod.website-files.com/6876b87fcdcec4dc81409391/68efe2925926ea4fc2bfc872_AI%20Content%20Vs%20Human.png)
+
+[More Articles Are Now Created by AI Than Humans](https://graphite.io/five-percent/more-articles-are-now-created-by-ai-than-humans)
+
+> In the poll of 791 professional developers, nearly one-third of senior engineers, defined as those with 10+ years of experience, reported that over half of the code they ship is AI generated. That figure is more than double the rate among junior developers with two years of experience or less, only 13% of whom reported the same. [[1]](https://www.techspot.com/news/109364-32-senior-developers-report-half-their-code-comes.html)
+> 
+> The [chart](https://www.techspot.com/images2/news/bigimage/2025/09/2025-09-07-image-4.jpg) we looked at showed that more senior developers are shipping AI-generated code than the junior ones. I think it’s interesting because intuitively you would think it’s the junior developers because they don’t know how to do the thing yet. It could mean the AI is not good enough yet to solve those tasks, but it could also mean experts are more effective at using it—they know how to review the code and they trust it more. One issue in society in the future will be: how do you become an expert if you never try to do the thing yourself?
+
+![image](https://www.fastly.com/cimages/ocb1q9kflo7k/2NadqKDzMN6Fp61kueRIbD/a27b55b7ae2a8d76557d1bf0e5aa628d/HowhaveAItoolsaffectedyourenjoymentofwork.png)
+
+[Senior Developers Ship nearly 2.5x more AI Code than Junior Counterparts](https://www.fastly.com/blog/senior-developers-ship-more-ai-code)
+
+![image](https://images.ctfassets.net/kftzwdyauwt9/6IdnOFLOG9JV3uiSOoM2Dl/bff44b57b3aad6f7991c057804da6b92/Chart_Media.png)
+
+[ChatGPT usage and adoption patterns at work](https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work/)
+
+> I think it’s important for people to still invest in themselves, in my opinion, and not just LLM everything.
 
 ---
 
 ### **1:37:18 - Post-training explained: Exciting new research directions in LLMs**
+
 **Reinforcement Learning with Verifiable Rewards (RLVR)** is the major breakthrough of 2025. By using verifiable domains like **math and code**, models can learn through trial and error to correct their own mistakes. Research is now moving toward **Process Reward Models**, which grade individual steps in a reasoning chain rather than just the final answer.
 
 ---
 
 ### **1:58:11 - Advice for beginners on how to get into AI development & research**
+
 The best way to learn is to **build a large language model from scratch** to understand components like the attention mechanism and KV cache. Beginners should reverse-engineer existing open-weight models by matching their outputs against reference implementations in libraries like **Hugging Face**. For research, finding **narrow evaluation niches**—such as where a specific model fails—can launch a career.
 
 ---
@@ -223,36 +263,43 @@ In the long term, we may transition to **brain-computer interfaces**, fundamenta
 
 ## References
 
-1. https://lexfridman.com/ai-sota-2026-transcript
-2. https://www.atomproject.ai/
-3. https://magazine.sebastianraschka.com/p/the-big-llm-architecture-comparison
-4. https://huggingface.co/deepseek-ai/DeepSeek-V3.2
-5. https://gs.statcounter.com/ai-chatbot-market-share
-6. https://medium.com/illuminations-mirror/rip-bard-and-say-hello-to-gemini-8f6a1e375be7
-7. https://www.anthropic.com/
-8. https://arena.ai/pt/leaderboard
-9. https://arize.com/blog-course/the-needle-in-a-haystack-test-evaluating-the-performance-of-llm-rag-systems/
-10. https://openrouter.ai/
-11. https://windsurf.com/
-12. https://allenai.org/
-13. https://www.llm360.ai/
-14. https://www.swiss-ai.org/apertus
-15. https://github.com/huggingface/smollm
-16. https://research.nvidia.com/labs/nemotron/Nemotron-3/
-17. https://mistral.ai/news/mistral-3
-18. https://rcai.de/en/
-19. https://www.llama.com/
-20. Nathan's X: https://x.com/natolambert
-21. Nathan's Blog: https://interconnects.ai
-22. Nathan's Website: https://natolambert.com
-23. Nathan's YouTube:    / @natolambert  
-24. Nathan's GitHub: https://github.com/natolambert
-25. Nathan's Book: https://rlhfbook.com
-26. Sebastian's X: https://x.com/rasbt
-27. Sebastian's Blog: https://magazine.sebastianraschka.com
-28. Sebastian's Website: https://sebastianraschka.com
-29. Sebastian's YouTube:    / @sebastianraschka  
-30. Sebastian's GitHub: https://github.com/rasbt
-31. Sebastian's Books
+1. https://x.com/lexfridman/status/2017735625227833850
+2. https://lexfridman.com/ai-sota-2026-transcript
+3. https://www.atomproject.ai/
+4. https://magazine.sebastianraschka.com/p/the-big-llm-architecture-comparison
+5. https://huggingface.co/deepseek-ai/DeepSeek-V3.2
+6. https://gs.statcounter.com/ai-chatbot-market-share
+7. https://medium.com/illuminations-mirror/rip-bard-and-say-hello-to-gemini-8f6a1e375be7
+8. https://www.anthropic.com/
+9. https://arena.ai/pt/leaderboard
+10. https://arize.com/blog-course/the-needle-in-a-haystack-test-evaluating-the-performance-of-llm-rag-systems/
+11. https://openrouter.ai/
+12. https://windsurf.com/
+13. https://allenai.org/
+14. https://www.llm360.ai/
+15. https://www.swiss-ai.org/apertus
+16. https://github.com/huggingface/smollm
+17. https://research.nvidia.com/labs/nemotron/Nemotron-3/
+18. https://mistral.ai/news/mistral-3
+19. https://rcai.de/en/
+20. https://www.llama.com/
+21. https://newsletter.semianalysis.com/p/nvidia-tensor-core-evolution-from-volta-to-blackwell
+22. OMLo3 https://arxiv.org/pdf/2512.13961
+23. https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work/
+24. https://www.techspot.com/news/109364-32-senior-developers-report-half-their-code-comes.html
+25. https://graphite.io/five-percent/more-articles-are-now-created-by-ai-than-humans
+26. https://www.fastly.com/blog/senior-developers-ship-more-ai-code
+27. Nathan's X: https://x.com/natolambert
+28. Nathan's Blog: https://interconnects.ai
+29. Nathan's Website: https://natolambert.com
+30. Nathan's YouTube:    / @natolambert  
+31. Nathan's GitHub: https://github.com/natolambert
+32. Nathan's Book: https://rlhfbook.com
+33. Sebastian's X: https://x.com/rasbt
+34. Sebastian's Blog: https://magazine.sebastianraschka.com
+35. Sebastian's Website: https://sebastianraschka.com
+36. Sebastian's YouTube:    / @sebastianraschka  
+37. Sebastian's GitHub: https://github.com/rasbt
+38. Sebastian's Books
     1.  https://www.manning.com/books/build-a-large-language-model-from-scratch
     2.  https://www.manning.com/books/build-a-reasoning-model-from-scratch

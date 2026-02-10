@@ -60,8 +60,11 @@ A dense layer (or fully connected layer) connects every neuron in one layer to e
  * [Sparse Expert Models (Switch Transformers, GLAM, and more... w/ the Authors)](https://www.youtube.com/watch?v=ccBMRryxGog)
 	> [<img src="https://img.youtube.com/vi/ccBMRryxGog/0.jpg" width="200">](https://www.youtube.com/watch?v=ccBMRryxGog "This video is an interview with Barret Zoph and William Fedus of Google Brain about Sparse Expert Models. by Umar Jamil 650,433 views 58 minutes, 03 seconds")
 
+ * [Sparse Models vs Dense Models Smarter, Faster AI](https://www.youtube.com/watch?v=R93QMegF89Y)
+	> [<img src="https://img.youtube.com/vi/R93QMegF89Y/0.jpg" width="200">](https://www.youtube.com/watch?v=R93QMegF89Y " Sparse Models vs Dense Models — where smarter design can beat sheer size. by Durga Software Solutions 40 views 5 minutes, 16 seconds")
+
 ## References
 
 1. Sparse Models for Machine Learning: https://arxiv.org/abs/2308.13960
-2. https://milvus.io/ai-quick-reference/what-is-the-difference-between-dense-and-sparse-layers#:~:text=A%20dense%20layer%20(or%20fully,link%20to%20the%20next%20layer.
-3. https://hacarus.com/tech/using-sparse-modeling-in-ai-a-human-centric-explainable-approach/#:~:text=The%20general%20assumption%20in%20sparse,a%20small%20amount%20of%20data.
+2. https://milvus.io/ai-quick-reference/what-is-the-difference-between-dense-and-sparse-layers
+3. https://hacarus.com/tech/using-sparse-modeling-in-ai-a-human-centric-explainable-approach/
