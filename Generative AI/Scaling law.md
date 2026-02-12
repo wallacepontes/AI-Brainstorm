@@ -25,6 +25,20 @@
 	- [Reinforcement learning, actor and learner](#reinforcement-learning-actor-and-learner)
 		- [Key Aspects of Actor-Learner Architecture](#key-aspects-of-actor-learner-architecture)
 		- [Optimization Strategies:](#optimization-strategies)
+	- [Supervised Fine-Tuning (SFT)](#supervised-fine-tuning-sft)
+		- [Key Aspects of SFT](#key-aspects-of-sft)
+		- [SFT vs. Other Approaches](#sft-vs-other-approaches)
+		- [Common Use Cases](#common-use-cases)
+	- [Direct Preference Optimization](#direct-preference-optimization)
+		- [What is DPO and PPO?](#what-is-dpo-and-ppo)
+	- ["Aha moments" in Large Language Models](#aha-moments-in-large-language-models)
+		- [Core Concepts \& Origins](#core-concepts--origins)
+		- [Mechanisms and Characteristics](#mechanisms-and-characteristics)
+		- ["Aha Moments" as Real vs. Decorative](#aha-moments-as-real-vs-decorative)
+		- [Applications and Impact](#applications-and-impact)
+		- [The "Aha Framework" for Business](#the-aha-framework-for-business)
+	- [Group Relative Policy Optimization (GRPO)](#group-relative-policy-optimization-grpo)
+	- [The FLOPs Calculus of Language Model Training](#the-flops-calculus-of-language-model-training)
 	- [Videos](#videos-1)
 	- [References](#references)
 
@@ -302,6 +316,86 @@ Frameworks: Libraries such as JAX and BRAX allow for end-to-end, high-performanc
 - Efficient Data Transfer: Minimize data transfer latency between CPUs (actors) and GPUs (learners).
 - Parallelism: Use multiple GPUs to run multiple policies in parallel if necessary.
 
+## Supervised Fine-Tuning (SFT)
+
+Supervised Fine-Tuning (SFT) is a critical, initial post-training process that adapts pre-trained AI models to specific tasks or instruction-following behaviors using a curated, labeled dataset of examples. By training on high-quality input-output pairs (prompts and responses), SFT aligns models with desired tones, formats, and behaviors, typically acting as a precursor to reinforcement learning.
+
+### Key Aspects of SFT
+
+- Purpose: To transform a general-purpose base model into a specialized model that follows specific instructions and behaviors.
+- Method: The model is trained on a smaller, high-quality, task-specific dataset, where it learns to predict the next token based on labeled examples, explains Sarah on BlueDot Impact blog.
+- Data Quality: High-quality,, diverse examples are essential; as few as 50 to 1,000 examples can significantly improve model performance, says a YouTube video by Appen.
+- Techniques:
+  - Full Fine-Tuning: Updates all parameters, requiring high computational resources.
+  - PEFT (Parameter-Efficient Fine-Tuning): Updates only a small subset of parameters (e.g., LoRA), which is more accessible and common, explains a YouTube video by Appen.
+
+### SFT vs. Other Approaches
+
+- SFT vs. Pre-training: Pre-training teaches general language, while SFT teaches specific skills.
+- SFT vs. RAG: SFT shapes model behavior and style, whereas Retrieval-Augmented Generation (RAG) provides factual knowledge.
+- SFT vs. RLHF/DPO: SFT is often the first step to teach format, followed by methods like DPO to further align with preferences.
+
+### Common Use Cases
+
+Instruction Following: Teaching models to act as chatbots or assistants, says a YouTube video by Appen.
+Domain Adaptation: Specializing models for legal, financial, or medical document analysis.
+Output Formatting: Ensuring consistent output formats like JSON or SQL.
+
+## [Direct Preference Optimization](https://arxiv.org/abs/2305.18290)
+
+Direct Preference Optimization (DPO) fine-tuning allows you to fine-tune models based on prompts and pairs of responses. This approach enables the model to learn from more subjective human preferences, optimizing for outputs that are more likely to be favored.
+
+Direct preference optimization files have a different format than supervised fine-tuning. Customers provide a "conversation" containing the system message and the initial user message, and then "completions" with paired preference data. Users can only provide two completions.
+
+### What is DPO and PPO?
+
+DPO vs PPO: How To Align LLM
+DPO (Direct Preference Optimization) and PPO (Proximal Policy Optimization) are two methods used to align Large Language Models (LLMs) with human preferences. DPO directly optimizes the model based on human feedback, while PPO is a reinforcement learning approach that iteratively improves the model's behavior.
+
+## "Aha moments" in Large Language Models
+
+"Aha moments" in Large Language Models (LLMs) refer to emergent, often spontaneous, moments of sudden insight, reflection, and self-correction that occur during training or inference, particularly in reasoning-heavy tasks. These moments are frequently associated with advanced reinforcement learning (RL) techniques, where models autonomously develop complex problem-solving strategies, such as backtracking or verifying intermediate steps.
+
+Here is a breakdown of the key concepts surrounding "aha moments" in LLMs:
+
+### Core Concepts & Origins
+
+- Definition: A moment of sudden realization or "Eureka!" where the model recognizes an error in its current reasoning path and corrects it without explicit programming.
+- Emergence in RL: These moments gained prominence with models like DeepSeek-R1-Zero, which used pure reinforcement learning on mathematical tasks, causing the model to develop reflection and self-correction strategies autonomously.
+- Key Behavior: The "aha moment" is characterized by the model generating a "thought" block (like "Wait," "Let me re-evaluate") followed by a correction. 
+
+### Mechanisms and Characteristics
+
+- GRPO (Group Relative Policy Optimization): DeepSeek used GRPO, where the model generates multiple solutions for one prompt, allowing it to evaluate and select the best reasoning path, fostering better, self-correcting behavior.
+- Increased Response Length: The development of "aha moments" is often accompanied by the model naturally increasing its chain-of-thought (CoT) length, allowing for more in-depth, "slow" thinking.
+- Beyond Math: While initially identified in math/coding, these capabilities are being applied to social reasoning (Theory of Mind) and visual language models (VLMs).
+
+### "Aha Moments" as Real vs. Decorative
+
+Recent research has questioned whether all "aha moments" are genuine, or if they are "decorative" (post-hoc rationalization). 
+
+- True Thinking Steps: Some steps are genuinely used to compute the final output.
+- Decorative Steps: Many steps, including self-verification, may be "decorative," where the model generates a "Wait..." phrase but does not actually change its internal reasoning, resulting in minimal impact on the final answer.
+- Steering: Researchers have identified a "TrueThinking" direction in the latent space, which can be used to steer models, forcing them to either actually perform or skip these self-verification steps. 
+
+### Applications and Impact
+
+- Improved Reasoning: The, "aha moment" phenomenon enables, smaller models (e.g., 7B parameters) to achieve performance comparable to larger models (e.g., o1-preview).
+- Safety Improvements: These moments can be used to monitor and detect unsafe behaviors in the chain-of-thought.
+- Visual Reasoning: "Aha moments" are being explored to help multimodal models (VLMs) self-correct visual, generation,, and comprehension tasks. 
+
+### The "Aha Framework" for Business
+
+Apart from the technical, definition, "Aha Moment" is also used in a, business context as a, framework to, identify, high-value, use cases for LLM agents, requiring them to be: Ambiguous, High-Volume, and Asymmetric in, upside. 
+
+## Group Relative Policy Optimization (GRPO)
+
+![alt text](image-4.png)
+
+## The FLOPs Calculus of Language Model Training
+
+
+
 ## Videos
 
  * [Scaling Laws of AI explained | Dario Amodei and Lex Fridman](https://www.youtube.com/watch?v=GrloGdp5wdc)
@@ -359,4 +453,5 @@ Frameworks: Libraries such as JAX and BRAX allow for end-to-end, high-performanc
 3. [Scaling Laws Are Unreliable for Downstream Tasks: A Reality Check](https://arxiv.org/pdf/2507.00885)
 4. [Stanford's online Artificial Intelligence programs](https://stanford.io/ai)
 5. https://arxiv.org/html/2504.00294v1
-6. 
+6. https://medium.com/@dzmitrybahdanau/the-flops-calculus-of-language-model-training-3b19c1f025e4
+7. 

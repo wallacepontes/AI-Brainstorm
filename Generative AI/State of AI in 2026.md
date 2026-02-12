@@ -13,6 +13,7 @@
     - [**40:08 - Transformers: Evolution of LLMs since 2019**](#4008---transformers-evolution-of-llms-since-2019)
     - [**48:05 - AI Scaling Laws: Are they dead or still holding?**](#4805---ai-scaling-laws-are-they-dead-or-still-holding)
     - [**1:04:12 - How AI is trained: Pre-training, Mid-training, and Post-training**](#10412---how-ai-is-trained-pre-training-mid-training-and-post-training)
+  - [Social choice theory](#social-choice-theory)
     - [**1:37:18 - Post-training explained: Exciting new research directions in LLMs**](#13718---post-training-explained-exciting-new-research-directions-in-llms)
     - [**1:58:11 - Advice for beginners on how to get into AI development \& research**](#15811---advice-for-beginners-on-how-to-get-into-ai-development--research)
     - [**2:21:03 - Work culture in AI (72+ hour weeks)**](#22103---work-culture-in-ai-72-hour-weeks)
@@ -163,18 +164,52 @@ Scaling laws are still holding strong across pre-training, reinforcement learnin
 [ChatGPT usage and adoption patterns at work](https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work/)
 
 > I think it’s important for people to still invest in themselves, in my opinion, and not just LLM everything.
+>
+> To go through the table of contents: first, you did the problem setup, training overview, what are preferences, preference data and the optimization tools, reward modeling, regularization, instruction tuning, rejection sampling, reinforcement learning. Then constitutional AI and AI feedback, reasoning and inference-time scaling, tool use and function calling, synthetic data and distillation, evaluation, and then the open questions section: over-optimization, style and information, product UX, character and post-training.
 
+![Von Neumann–Morgenstern utility theorem](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Supply-demand-equilibrium.svg/250px-Supply-demand-equilibrium.svg.png)
+
+[Von Neumann–Morgenstern utility theorem](https://grokipedia.com/page/Von_Neumann%E2%80%93Morgenstern_utility_theorem)
+
+[Social choice theory](https://grokipedia.com/page/Social_choice_theory)
 ---
 
 ### **1:37:18 - Post-training explained: Exciting new research directions in LLMs**
 
 **Reinforcement Learning with Verifiable Rewards (RLVR)** is the major breakthrough of 2025. By using verifiable domains like **math and code**, models can learn through trial and error to correct their own mistakes. Research is now moving toward **Process Reward Models**, which grade individual steps in a reasoning chain rather than just the final answer.
 
+![alt text](image-2.png)
+
+> And then DeepSeek are the people that did the training breakthrough, which is, they scaled the reinforcement learning. They have the model generate answers and then grade the completion if it was right, and then that accuracy is your reward for reinforcement learning. So reinforcement learning is classically an agent that acts in an environment, and the environment gives it a state and a reward back, and you try to maximize this reward.
+
+![alt text](image-3.png)
+
+> To summarize: mid-training gives the model the skills it needs to learn; RL with verifiable rewards lets the model try many times, putting a lot of compute into trial-and-error learning across hard problems; and then RLHF finishes the model, making it easy to use and rounding it out.
+>
+> People don’t want to put all their eggs in one basket. If you are planning a huge cluster to be held for two months and then it fails on day 50, the opportunity costs are just so big. I think people are a little bit more cautious and incremental now.
+>
+> To summarize the scaling: you don’t want to do too much RLHF because of how the signal scales. People have worked on RLHF for years, especially after ChatGPT, but the first release of a reasoning model trained with **RLVR**, OpenAI’s o1, had a scaling plot where if you increase the training compute logarithmically, you get a linear increase in evaluations. This has been reproduced multiple times; I think DeepSeek had a plot like this. But **there’s no scaling law for RLHF** where if you log-increase the compute, you get linear performance.
+>
+> **scaling paradigm** where you can let the best runs go for an extra 10x and you get performance, but you can’t do this with RLHF. Check the [The Art of Scaling Reinforcement Learning with Language Models](#references), their framework is called ScaleRL. Their incremental experiment was like 10,000 V100 hours, which is thousands or tens of thousands of dollars per experiment, and they do a lot of them. This cost is not accessible to the average academic, which creates a hard equilibrium when trying to figure out how to learn from each community.
+
 ---
 
 ### **1:58:11 - Advice for beginners on how to get into AI development & research**
 
 The best way to learn is to **build a large language model from scratch** to understand components like the attention mechanism and KV cache. Beginners should reverse-engineer existing open-weight models by matching their outputs against reference implementations in libraries like **Hugging Face**. For research, finding **narrow evaluation niches**—such as where a specific model fails—can launch a career.
+
+> By implementing a simple model from scratch that you can run on your computer. The goal of building a model from scratch.
+> It’s to see exactly what goes into the LLM, what exactly comes out of the LLM, and how pre-training works on your own computer. And then you learn about pre-training, supervised fine-tuning, and the attention mechanism.
+>
+> The Hugging Face Transformers library is great, but if you want to learn about LLMs, I think that’s not the best place to start because the code is so complex. It has to fit so many use cases and some people use it in production. It has to be really sophisticated, so it’s intertwined and hard; it’s not linear to read.
+>
+> But again, even the Transformers library is not used in production for inference. People use SGLang or vLLM, and it adds another layer of complexity.
+
+![400 models](https://transformers-community-transformers-tenets.hf.space/_astro/llama_center.CbQ5MyAc_ZraNCd.webp)
+
+> What I would recommend doing is if I want to understand, for example, how OLMo 3 is implemented, I would look at the weights in the model hub and the config file. You can see, “Oh, they used so many layers. They use group query attention.” Then you see all the components in a human-readable 100-line config file. And then you start with your GPT-2 model and add these things.
+>
+> The anonymous accounts on X in ML are very popular, and no one knows who all these people are. It could just be random people who study this stuff deeply. Especially with AI tools to help you keep digging into things you don’t understand, it’s very useful. There are research areas that might only have three papers you need to read, and then one of the authors will probably email you back.
 
 ---
 
@@ -289,17 +324,60 @@ In the long term, we may transition to **brain-computer interfaces**, fundamenta
 24. https://www.techspot.com/news/109364-32-senior-developers-report-half-their-code-comes.html
 25. https://graphite.io/five-percent/more-articles-are-now-created-by-ai-than-humans
 26. https://www.fastly.com/blog/senior-developers-ship-more-ai-code
-27. Nathan's X: https://x.com/natolambert
-28. Nathan's Blog: https://interconnects.ai
-29. Nathan's Website: https://natolambert.com
-30. Nathan's YouTube:    / @natolambert  
-31. Nathan's GitHub: https://github.com/natolambert
-32. Nathan's Book: https://rlhfbook.com
-33. Sebastian's X: https://x.com/rasbt
-34. Sebastian's Blog: https://magazine.sebastianraschka.com
-35. Sebastian's Website: https://sebastianraschka.com
-36. Sebastian's YouTube:    / @sebastianraschka  
-37. Sebastian's GitHub: https://github.com/rasbt
-38. Sebastian's Books
+27. [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/pdf/2501.12948)
+28. [Can Aha Moments Be Fake?](https://arxiv.org/pdf/2510.24941v2)
+29. [Understanding the DeepSeek R1 Paper](https://huggingface.co/learn/llm-course/chapter12/3)
+30. [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/pdf/2212.08073)
+31. https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback
+32. [Direct Preference Optimization](https://arxiv.org/abs/2305.18290)
+33. [SFT-GO: Supervised Fine-Tuning with Group Optimization for Large Language Models](hhttps://arxiv.org/pdf/2506.15021)
+34. [Reinforcement Learning from Human Feedback](https://rlhfbook.com/book.pdf)
+35. [Understanding and Implementing Qwen3 From Scratch](https://magazine.sebastianraschka.com/p/qwen3-from-scratch)
+36. [GRPO is Secretly a Process Reward Model](https://arxiv.org/html/2509.21154v1)
+37. [The Art of Scaling Reinforcement Learning with Language Models](https://arxiv.org/pdf/2510.13786)
+38. [improve mathematical reasoning in language models by automated process supervision](https://arxiv.org/pdf/2406.06592)
+39. [DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](https://arxiv.org/pdf/2512.02556)
+40. [Maintain the unmaintainable: 1M python loc, 400+ models](https://huggingface.co/spaces/transformers-community/Transformers-tenets)
+41. [Open Character Training: Shaping the Persona of AI Assistants through Constitutional AI](https://arxiv.org/pdf/2511.01689)
+42. [Mapping Social Choice Theory to RLHF](https://arxiv.org/pdf/2404.13038v1)
+43. [K2-V2: A 360-Open, Reasoning-Enhanced LLM](https://arxiv.org/pdf/2512.06201v1)
+44. [Nemotron 3 Nano: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning](https://arxiv.org/pdf/2512.20848)
+45. [Open-Reasoner-Zero: An Open Source Approach to Scaling Up Reinforcement Learning on the Base Model](https://arxiv.org/pdf/2503.24290)
+46. [Seed1.5-Thinking: Advancing Superb Reasoning Models with Reinforcement Learning](https://arxiv.org/pdf/2504.13914)
+47. [Phi-4-reasoning Technical Report](https://arxiv.org/pdf/2504.21318)
+48. [Llama-Nemotron: Efficient Reasoning Models](https://arxiv.org/pdf/2505.00949)
+49. [INTELLECT-2: A Reasoning Model Trained Through Globally Decentralized Reinforcement Learning](https://arxiv.org/pdf/2505.07291)
+50. [MiMo: Unlocking the Reasoning Potential of Language Model – From Pretraining to Posttraining](https://arxiv.org/pdf/2505.07608)
+51. [Qwen3 Technical Report](https://arxiv.org/pdf/2505.09388)
+52. [Hunyuan-TurboS: Advancing Large Language Models through Mamba-Transformer Synergy and Adaptive Chain-of-Thought](https://arxiv.org/pdf/2505.15431)
+53. [Skywork Open Reasoner 1 Technical Report](https://arxiv.org/pdf/2505.22312)
+54. [MiMo-VL Technical Report](https://arxiv.org/pdf/2506.03569v1)
+55. [Open Thoughts - DATA RECIPES FOR REASONING MODELS](https://arxiv.org/pdf/2506.04178)
+56. [Magistral Mistral ai](https://arxiv.org/pdf/2506.10910)
+58. [MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention](https://arxiv.org/pdf/2506.13585)
+59. [KIMI K2: OPEN AGENTIC INTELLIGENCE](https://arxiv.org/pdf/2507.20534)
+60. [GLM-4.5: Agentic, Reasoning, and Coding (ARC Foundation Models](https://arxiv.org/pdf/2508.06471)
+61. [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/pdf/2508.14444)
+62. [K2-Think: A Parameter-Efficient Reasoning System](https://arxiv.org/pdf/2509.07604)
+63. [LongCat-Flash-Thinking-2601 Technical Report](https://arxiv.org/pdf/2601.16725)
+64. [Introducing LongCat-Flash-Thinking: A Technical Report](https://arxiv.org/pdf/2509.18883)
+65. [Ring-1T - Every Step Evolves: Scaling Reinforcement Learning for Trillion-Scale Thinking Model](https://arxiv.org/pdf/2510.18855)
+66. [Olmo 3](https://arxiv.org/pdf/2512.13961)
+67. [DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](https://arxiv.org/pdf/2512.02556)
+68. [K2-V2: A 360-Open, Reasoning-Enhanced LLM](https://arxiv.org/pdf/2512.06201)
+69. [NVIDIA Nemotron 3 Efficient and Open Intelligence](https://arxiv.org/pdf/2512.20856)
+70. [MiMo-V2-Flash Technical Report](https://arxiv.org/pdf/2601.02780)
+71. Nathan's X: https://x.com/natolambert
+72. Nathan's Blog: https://interconnects.ai
+73. Nathan's Website: https://natolambert.com
+74. Nathan's YouTube:    / @natolambert  
+75. Nathan's GitHub: https://github.com/natolambert
+76. Nathan's Book: https://rlhfbook.com
+77. Sebastian's X: https://x.com/rasbt
+78. Sebastian's Blog: https://magazine.sebastianraschka.com
+79. Sebastian's Website: https://sebastianraschka.com
+80. Sebastian's YouTube:    / @sebastianraschka  
+81. Sebastian's GitHub: https://github.com/rasbt
+82. Sebastian's Books
     1.  https://www.manning.com/books/build-a-large-language-model-from-scratch
     2.  https://www.manning.com/books/build-a-reasoning-model-from-scratch
