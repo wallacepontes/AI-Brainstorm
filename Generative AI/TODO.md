@@ -1,6 +1,8 @@
 # TODO
 
+## AI Inferences
 
+https://www.youtube.com/watch?v=XtT5i0ZeHHE
 
 ## AI Chatbot Market Share Worldwide - January 2026
 

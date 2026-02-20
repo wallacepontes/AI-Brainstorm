@@ -32,6 +32,9 @@
     - [**3:53:35 - Manhattan Project for AI**](#35335---manhattan-project-for-ai)
     - [**4:00 - Future of NVIDIA, GPUs, and AI compute clusters**](#400---future-of-nvidia-gpus-and-ai-compute-clusters)
     - [**4:08:15 - Future of human civilization**](#40815---future-of-human-civilization)
+  - [NotebookLM](#notebooklm)
+    - [MindMap](#mindmap)
+    - [AI 2026 Jagged Reality](#ai-2026-jagged-reality)
   - [Video](#video)
   - [References](#references)
 
@@ -210,55 +213,94 @@ The best way to learn is to **build a large language model from scratch** to und
 > What I would recommend doing is if I want to understand, for example, how OLMo 3 is implemented, I would look at the weights in the model hub and the config file. You can see, “Oh, they used so many layers. They use group query attention.” Then you see all the components in a human-readable 100-line config file. And then you start with your GPT-2 model and add these things.
 >
 > The anonymous accounts on X in ML are very popular, and no one knows who all these people are. It could just be random people who study this stuff deeply. Especially with AI tools to help you keep digging into things you don’t understand, it’s very useful. There are research areas that might only have three papers you need to read, and then one of the authors will probably email you back.
+>
+> I feel like my friends who are professors seem on average happier than my friends who work at— a frontier lab, to be totally honest. Because there’s just a grounding and— the frontier labs definitely do this 9/9/6— which essentially is shorthand for work all the time.
 
 ---
 
 ### **2:21:03 - Work culture in AI (72+ hour weeks)**
+
 Work culture in frontier AI labs has adopted the **"9-9-6" schedule**—9:00 AM to 9:00 PM, six days a week. This intense pressure is driven by the "leapfrogging" nature of the competition, where being even a few months behind is seen as a major loss.
+
+![Deaths due to long working hours per 100,000 people](https://preview.redd.it/deaths-due-to-long-working-hours-per-100-000-people-v0-znt3v7ur4zv81.jpg?width=640&crop=smart&auto=webp&s=9b9314b64444f1ce465fb4843f98e6027e1695a7)
+**Deaths due to long working hours per 100,000 people**
+
+> In the book [Apple in China, Patrick McGee](https://www.amazon.com.br/Apple-China-Capture-Greatest-Company/dp/1668053373) talked about how hard the Apple engineers worked to set up the supply chains in China.
 
 ---
 
 ### **2:24:49 - Silicon Valley bubble**
+
 Silicon Valley acts as a **reality distortion field** where researchers convince each other that breakthroughs are imminent. While this "echo chamber" fosters extreme productivity, it can disconnect developers from the perspectives of people in the Midwest or other parts of the world.
+
+> There’s this hype where the world will be transformed in a scale of weeks and you want to be at the center of it.
+
+![bubbles](https://wp.technologyreview.com/wp-content/uploads/2018/08/electiontwitterretweetoverall2k-4.jpg?crop=0px%2C0px%2C2479px%2C2142px&w=700)
+**This is what filter bubbles actually look like**
+
+> I think bubbles are actually really useful and effective. It’s not necessarily a negative thing because you can be ultra-productive.
+>
+> [Boom: Bubbles and the End of Stagnation by Bryne Hobart](https://www.amazon.com/Boom-Bubbles-Stagnation-Byrne-Hobart/dp/1953953476) wrote a book classifying bubbles.
+>
+> [Season of the Witch: Enchantment, Terror, and Deliverance in the City of Love](https://www.amazon.com/Season-Witch-Enchantment-Terror-Deliverance/dp/1439108242)
 
 ---
 
 ### **2:28:46 - Text diffusion models and other new research directions**
+
 **Text diffusion models** offer an alternative to autoregressive transformers by generating entire blocks of text in parallel rather than one token at a time. While not yet superior to transformers in reasoning, they are highly efficient for tasks like generating **large code diffs**.
+
+> transformer architecture and the autoregressive transformer architecture. People are developing alternatives to the autoregressive transformer. One of them would be, for example, text diffusion models.
+>
+> I don’t think the text diffusion model is going to replace autoregressive LLMs, but it will be something for quick, cheap, at-scale tasks. Maybe the free tier in the future will be something like that.
 
 ---
 
 ### **2:34:28 - Tool use**
+
 Tool use involves an LLM calling external programs like **calculators, Python interpreters, or web search** to solve problems reliably. This paradigm shift reduces **hallucinations** by allowing the model to look up facts or perform precise math instead of relying on memory.
 
 ---
 
 ### **2:38:44 - Continual learning**
+
 **Continual learning** refers to a model's ability to modify its own weights quickly from feedback, similar to how a human employee learns on the job. Currently, this is difficult to achieve for individual users due to high compute costs, so most personalization is handled via **in-context learning** in large context windows.
+
+> SF zeitgeist of: what is AGI, Artificial General Intelligence, and what is ASI, Artificial Superintelligence?
 
 ---
 
 ### **2:44:06 - Long context**
+
 Context lengths are expected to scale to **2 million or 5 million tokens** in 2026. Innovative methods include **context compaction**, where an RL agent learns to summarize its own history to save memory while maintaining reasoning accuracy.
 
 ---
 
 ### **2:50:21 - Robotics**
+
 The robotics field is being supercharged by **transformer-based foundation models**. While locomotion (walking) is largely solved, **manipulation** remains difficult due to the "sim-to-real" gap and the immense complexity of the human hand. **Safety** is the ultimate barrier for consumer in-home robots.
 
+> When AlphaFold came out, it crushed this benchmark. I mean there were multiple iterations, but I remember the first one explicitly modeled the physical interactions and the physics of the molecule.
 ---
 
 ### **2:59:31 - Timeline to AGI**
+
 A common definition for **AGI (Artificial General Intelligence)** is an AI capable of replacing a **remote digital worker**. Predictions for this milestone range from **2027 to 2031**, though "jagged" capabilities mean some tasks will be automated much sooner than others.
+
+> And with the superhuman coder, I think the presumption there is the number of humans in the loop goes to zero.
 
 ---
 
 ### **3:06:47 - Will AI replace programmers?**
+
 Programming is shifting from writing lines of code to **system design and product management**. By the end of 2026, agents will likely be able to implement simple features end-to-end in large production codebases with minimal human oversight.
+
+> It’s good at showing slop. I would rather think of safety-critical systems, like asking AI to end-to-end generate something that manages logistics— or manages cars— a fleet of cars, all that kind of stuff. So it end-to-end generates that for you.
 
 ---
 
 ### **3:25:18 - Is the dream of AGI dying?**
+
 The dream of a single "one model to rule them all" in the cloud is being challenged by the reality of **specialized agents**. In 2026, users will likely interact with multiple agents tailored for specific tasks like coding, research, or travel planning.
 
 ---
@@ -290,6 +332,32 @@ NVIDIA’s moat is the **CUDA ecosystem**, which has been built over two decades
 
 ### **4:08:15 - Future of human civilization**
 In the long term, we may transition to **brain-computer interfaces**, fundamentally changing how we interact with information. As digital "slop" increases, there will be a significant **premium on physical goods**, human connection, and in-person experiences. Ultimately, AI serves as a mirror, helping us better understand our own **consciousness**.
+
+## NotebookLM
+
+### [MindMap](AI_2026_Jagged_Reality_MindMap.png)
+
+```mermaid
+mindmap
+  State of AI in 2026
+    The DeepSeek Moment
+    Model Landscape 2025-2026
+      US Frontier Models
+      Chinese Open-weights
+    Technical Breakthroughs
+      Architecture Tweaks
+      Scaling Laws
+      Alternative Paradigms
+    AI for Coding
+    Data and Ethics
+    Future Directions
+    Industry Dynamics
+```
+
+### AI 2026 Jagged Reality
+
+[![AI 2026 Jagged Reality](AI_2026_Jagged_Reality.jpg)](AI_2026_Jagged_Reality.pdf)
+
 
 ## Video
 
@@ -329,55 +397,68 @@ In the long term, we may transition to **brain-computer interfaces**, fundamenta
 29. [Understanding the DeepSeek R1 Paper](https://huggingface.co/learn/llm-course/chapter12/3)
 30. [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/pdf/2212.08073)
 31. https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback
-32. [Direct Preference Optimization](https://arxiv.org/abs/2305.18290)
-33. [SFT-GO: Supervised Fine-Tuning with Group Optimization for Large Language Models](hhttps://arxiv.org/pdf/2506.15021)
-34. [Reinforcement Learning from Human Feedback](https://rlhfbook.com/book.pdf)
-35. [Understanding and Implementing Qwen3 From Scratch](https://magazine.sebastianraschka.com/p/qwen3-from-scratch)
-36. [GRPO is Secretly a Process Reward Model](https://arxiv.org/html/2509.21154v1)
-37. [The Art of Scaling Reinforcement Learning with Language Models](https://arxiv.org/pdf/2510.13786)
-38. [improve mathematical reasoning in language models by automated process supervision](https://arxiv.org/pdf/2406.06592)
-39. [DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](https://arxiv.org/pdf/2512.02556)
-40. [Maintain the unmaintainable: 1M python loc, 400+ models](https://huggingface.co/spaces/transformers-community/Transformers-tenets)
-41. [Open Character Training: Shaping the Persona of AI Assistants through Constitutional AI](https://arxiv.org/pdf/2511.01689)
-42. [Mapping Social Choice Theory to RLHF](https://arxiv.org/pdf/2404.13038v1)
-43. [K2-V2: A 360-Open, Reasoning-Enhanced LLM](https://arxiv.org/pdf/2512.06201v1)
-44. [Nemotron 3 Nano: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning](https://arxiv.org/pdf/2512.20848)
-45. [Open-Reasoner-Zero: An Open Source Approach to Scaling Up Reinforcement Learning on the Base Model](https://arxiv.org/pdf/2503.24290)
-46. [Seed1.5-Thinking: Advancing Superb Reasoning Models with Reinforcement Learning](https://arxiv.org/pdf/2504.13914)
-47. [Phi-4-reasoning Technical Report](https://arxiv.org/pdf/2504.21318)
-48. [Llama-Nemotron: Efficient Reasoning Models](https://arxiv.org/pdf/2505.00949)
-49. [INTELLECT-2: A Reasoning Model Trained Through Globally Decentralized Reinforcement Learning](https://arxiv.org/pdf/2505.07291)
-50. [MiMo: Unlocking the Reasoning Potential of Language Model – From Pretraining to Posttraining](https://arxiv.org/pdf/2505.07608)
-51. [Qwen3 Technical Report](https://arxiv.org/pdf/2505.09388)
-52. [Hunyuan-TurboS: Advancing Large Language Models through Mamba-Transformer Synergy and Adaptive Chain-of-Thought](https://arxiv.org/pdf/2505.15431)
-53. [Skywork Open Reasoner 1 Technical Report](https://arxiv.org/pdf/2505.22312)
-54. [MiMo-VL Technical Report](https://arxiv.org/pdf/2506.03569v1)
-55. [Open Thoughts - DATA RECIPES FOR REASONING MODELS](https://arxiv.org/pdf/2506.04178)
-56. [Magistral Mistral ai](https://arxiv.org/pdf/2506.10910)
-58. [MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention](https://arxiv.org/pdf/2506.13585)
-59. [KIMI K2: OPEN AGENTIC INTELLIGENCE](https://arxiv.org/pdf/2507.20534)
-60. [GLM-4.5: Agentic, Reasoning, and Coding (ARC Foundation Models](https://arxiv.org/pdf/2508.06471)
-61. [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/pdf/2508.14444)
-62. [K2-Think: A Parameter-Efficient Reasoning System](https://arxiv.org/pdf/2509.07604)
-63. [LongCat-Flash-Thinking-2601 Technical Report](https://arxiv.org/pdf/2601.16725)
-64. [Introducing LongCat-Flash-Thinking: A Technical Report](https://arxiv.org/pdf/2509.18883)
-65. [Ring-1T - Every Step Evolves: Scaling Reinforcement Learning for Trillion-Scale Thinking Model](https://arxiv.org/pdf/2510.18855)
-66. [Olmo 3](https://arxiv.org/pdf/2512.13961)
-67. [DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](https://arxiv.org/pdf/2512.02556)
-68. [K2-V2: A 360-Open, Reasoning-Enhanced LLM](https://arxiv.org/pdf/2512.06201)
-69. [NVIDIA Nemotron 3 Efficient and Open Intelligence](https://arxiv.org/pdf/2512.20856)
-70. [MiMo-V2-Flash Technical Report](https://arxiv.org/pdf/2601.02780)
-71. Nathan's X: https://x.com/natolambert
-72. Nathan's Blog: https://interconnects.ai
-73. Nathan's Website: https://natolambert.com
-74. Nathan's YouTube:    / @natolambert  
-75. Nathan's GitHub: https://github.com/natolambert
-76. Nathan's Book: https://rlhfbook.com
-77. Sebastian's X: https://x.com/rasbt
-78. Sebastian's Blog: https://magazine.sebastianraschka.com
-79. Sebastian's Website: https://sebastianraschka.com
-80. Sebastian's YouTube:    / @sebastianraschka  
-81. Sebastian's GitHub: https://github.com/rasbt
-82. Sebastian's Books
+32. [AlphaFold Protein Structure Database](https://alphafold.ebi.ac.uk/)
+33. [WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment](https://arxiv.org/pdf/2402.12275)
+34. [LoRA Learns Less and Forgets Less](https://arxiv.org/pdf/2405.09673)
+35. [S-LORA: SERVING THOUSANDS OF CONCURRENT LORA ADAPTERS](https://arxiv.org/pdf/2311.03285)
+36. [Recursive Language Models](https://arxiv.org/pdf/2512.24601)
+37. [REINFORCEMENT LEARNING WITH VERIFIABLE REWARDS IMPLICITLY INCENTIVIZES CORRECT REASONING IN BASE LLMS](https://arxiv.org/pdf/2506.14245)
+38. [Inference-Time Scaling for Complex Tasks: Where We Stand and What Lies Ahead](https://arxiv.org/pdf/2504.00294v1)
+39. [Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference](https://arxiv.org/pdf/2508.02193)
+40. [LaMDA: Language Models for Dialog Applications](https://arxiv.org/pdf/2201.08239)
+41. [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805)
+42. [Generative Adversarial Networks](https://arxiv.org/pdf/1406.2661)
+43. [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/pdf/2112.10752)
+44. [Large Language Diffusion Models](https://arxiv.org/pdf/2502.09992)
+45. [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](https://arxiv.org/abs/2305.18290)
+46. [SFT-GO: Supervised Fine-Tuning with Group Optimization for Large Language Models](hhttps://arxiv.org/pdf/2506.15021)
+47. [Reinforcement Learning from Human Feedback](https://rlhfbook.com/book.pdf)
+48. [Understanding and Implementing Qwen3 From Scratch](https://magazine.sebastianraschka.com/p/qwen3-from-scratch)
+49. [GRPO is Secretly a Process Reward Model](https://arxiv.org/html/2509.21154v1)
+50. [The Art of Scaling Reinforcement Learning with Language Models](https://arxiv.org/pdf/2510.13786)
+51. [improve mathematical reasoning in language models by automated process supervision](https://arxiv.org/pdf/2406.06592)
+52. [DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](https://arxiv.org/pdf/2512.02556)
+53. [Maintain the unmaintainable: 1M python loc, 400+ models](https://huggingface.co/spaces/transformers-community/Transformers-tenets)
+54. [Open Character Training: Shaping the Persona of AI Assistants through Constitutional AI](https://arxiv.org/pdf/2511.01689)
+55. [Mapping Social Choice Theory to RLHF](https://arxiv.org/pdf/2404.13038v1)
+56. [K2-V2: A 360-Open, Reasoning-Enhanced LLM](https://arxiv.org/pdf/2512.06201v1)
+57. [Nemotron 3 Nano: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning](https://arxiv.org/pdf/2512.20848)
+58. [Open-Reasoner-Zero: An Open Source Approach to Scaling Up Reinforcement Learning on the Base Model](https://arxiv.org/pdf/2503.24290)
+59. [Seed1.5-Thinking: Advancing Superb Reasoning Models with Reinforcement Learning](https://arxiv.org/pdf/2504.13914)
+60. [Phi-4-reasoning Technical Report](https://arxiv.org/pdf/2504.21318)
+61. [Llama-Nemotron: Efficient Reasoning Models](https://arxiv.org/pdf/2505.00949)
+62. [INTELLECT-2: A Reasoning Model Trained Through Globally Decentralized Reinforcement Learning](https://arxiv.org/pdf/2505.07291)
+63. [MiMo: Unlocking the Reasoning Potential of Language Model – From Pretraining to Posttraining](https://arxiv.org/pdf/2505.07608)
+64. [Qwen3 Technical Report](https://arxiv.org/pdf/2505.09388)
+65. [Hunyuan-TurboS: Advancing Large Language Models through Mamba-Transformer Synergy and Adaptive Chain-of-Thought](https://arxiv.org/pdf/2505.15431)
+66. [Skywork Open Reasoner 1 Technical Report](https://arxiv.org/pdf/2505.22312)
+67. [MiMo-VL Technical Report](https://arxiv.org/pdf/2506.03569v1)
+68. [Open Thoughts - DATA RECIPES FOR REASONING MODELS](https://arxiv.org/pdf/2506.04178)
+69. [Magistral Mistral ai](https://arxiv.org/pdf/2506.10910)
+70. [MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention](https://arxiv.org/pdf/2506.13585)
+71. [KIMI K2: OPEN AGENTIC INTELLIGENCE](https://arxiv.org/pdf/2507.20534)
+72. [GLM-4.5: Agentic, Reasoning, and Coding (ARC Foundation Models](https://arxiv.org/pdf/2508.06471)
+73. [NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model](https://arxiv.org/pdf/2508.14444)
+74. [K2-Think: A Parameter-Efficient Reasoning System](https://arxiv.org/pdf/2509.07604)
+75. [LongCat-Flash-Thinking-2601 Technical Report](https://arxiv.org/pdf/2601.16725)
+76. [Introducing LongCat-Flash-Thinking: A Technical Report](https://arxiv.org/pdf/2509.18883)
+77. [Ring-1T - Every Step Evolves: Scaling Reinforcement Learning for Trillion-Scale Thinking Model](https://arxiv.org/pdf/2510.18855)
+78. [Olmo 3](https://arxiv.org/pdf/2512.13961)
+79. [DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](https://arxiv.org/pdf/2512.02556)
+80. [K2-V2: A 360-Open, Reasoning-Enhanced LLM](https://arxiv.org/pdf/2512.06201)
+81. [NVIDIA Nemotron 3 Efficient and Open Intelligence](https://arxiv.org/pdf/2512.20856)
+82. [MiMo-V2-Flash Technical Report](https://arxiv.org/pdf/2601.02780)
+83. Nathan's X: https://x.com/natolambert
+84. Nathan's Blog: https://interconnects.ai
+85. Nathan's Website: https://natolambert.com
+86. Nathan's YouTube:    / @natolambert  
+87. Nathan's GitHub: https://github.com/natolambert
+88. Nathan's Book: https://rlhfbook.com
+89. Sebastian's X: https://x.com/rasbt
+90. Sebastian's Blog: https://magazine.sebastianraschka.com
+91. Sebastian's Website: https://sebastianraschka.com
+92. Sebastian's YouTube:    / @sebastianraschka  
+93. Sebastian's GitHub: https://github.com/rasbt
+94. Sebastian's Books
     1.  https://www.manning.com/books/build-a-large-language-model-from-scratch
     2.  https://www.manning.com/books/build-a-reasoning-model-from-scratch
