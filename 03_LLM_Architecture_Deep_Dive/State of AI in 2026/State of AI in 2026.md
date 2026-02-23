@@ -381,7 +381,6 @@ mindmap
 
 [![AI 2026 Jagged Reality](img/AI_2026_Jagged_Reality.jpg)](pdf/AI_2026_Jagged_Reality.pdf)
 
-
 ## Video
 
  * [State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI | Lex Fridman Podcast #490](https://www.youtube.com/watch?v=EV7WhVT270Q)
